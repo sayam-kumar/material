@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+
+<body onkeyup="work()">
+    <script>
+        // var per = prompt("Enter your percentage : ");
+
+        // if(per >= 80 && per <= 100){
+        //     console.log("You are in merit :)");
+        //     document.write("You are in merit :)");
+        // }else if(per >= 60 && per < 80){
+        //     console.log("You got 1st position");
+        //     document.write("You got 1st position");
+        // }else if(per >= 45 && per < 60){
+        //     console.log("You got 2nd position");
+        //     document.write("You got 2nd position");
+        // }else if(per >= 33 && per < 45){
+        //     console.log("You got 3rd position");
+        //     document.write("You got 3rd position");
+        // }else if(per < 33){
+        //     console.log("FAIL!!!!");
+        //     document.write("FAIL!!!!");
+        // }else{
+        //     console.log("Please enter valid percentage.");
+        //     document.write("Please enter valid percentage.");
+        // }
+
+        // Ternary operator
+        // var a = 15;
+        // var b;
+
+        // (a == 15)? b = "True" : b = "False";
+        // console.log(b);
+
+
+        //use switch statement
+        // var day = 7;
+
+        // switch(day){
+        //     case 1:
+        //     console.log("Today is Monday");
+        //     break;
+
+        //     case 2:
+        //     console.log("Today is Tuesday");
+        //     break;
+
+        //     case 3:
+        //     console.log("Today is Wednesday");
+        //     break;
+
+        //     case 4:
+        //     console.log("Today is Thursday");
+        //     break;
+
+        //     case 5:
+        //     console.log("Today is Friday");
+        //     break;
+
+        //     case 6:
+        //     console.log("Today is Saturday");
+        //     break;
+
+        //     case 7:
+        //     console.log("Today is Sunday");
+        //     break;
+
+        //     default:
+        //     console.log("Enter the valid day!");
+
+        // }
+
+
+        //alert() box 
+        // alert("Hey there! " + "Are you ready to rock!!");
+        // var a = 55;
+        // var b = 145;
+        // if(a > b){
+        //     alert("A is greater: " + a);
+        // }else{
+        //     alert("B is greater: " + b);
+        //     alert("Because A value is: " + a);
+        // }
+        //Confirm() dialog box.
+        // var a = confirm("Do you like our content?");
+        // if(a){
+        //     alert("Thanks dear :) ");
+        // }else{
+        //     alert("Let it all go...!");
+        // }
+
+
+        //Function's
+
+        // function abc(){
+        //     document.write("Hello world!");
+        //     document.write("<br>");
+        //     document.write("<br>");
+        //     document.write("Thanks for visit my website.");
+        //     document.write("<br>");
+        //     document.write("<br>");
+        //     document.write("Bie, See you soon.");
+        //     document.write("<br>");
+        //     document.write("<br>");
+
+        // }
+
+        // abc()
+        // abc()
+
+
+        //Function with parameters.
+        // function sum(a, b){
+        //     document.write("your sum total is: ");
+        //     document.write(a + b);
+        //     document.write("<br>");
+        // }
+
+        // sum(15, 15);
+        // sum(555, 1);
+
+        //Function with return type.
+        // function name(firstN, lastN){
+        //     var ans = firstN + lastN;
+        //     return ans;
+        // }
+
+        // var ot = name("sayam", "kumar");
+        // document.write(ot);
+
+
+        // Function to stay home in quarantine.
+        // var corona_virus = Boolean;
+
+        // function stay_Home() {
+        //     if (corona_virus == true) {
+        //         document.write("Eat" + "<br>");
+        //         document.write("Work" + "<br>");
+        //         document.write("Sleep" + "<br>");
+        //         document.write("Repeat" + "<br>");
+        //     }else{
+        //         document.write("Live a normal life." + "<br>");
+        //     }
+        // }
+
+        // corona_virus = true;
+        // stay_Home();
+
+        // Events 
+        // function tap(){
+        //     document.write("Hello dear." + "<br>" + "Welcome to my page.")
+        // }
+        // function tp(){
+        //     document.write("Thanks for tap on me. :)")
+        // }
+        // function work(){
+        //     alert("Function work properly.")
+        // }
+
+
+        // Loop's (While Loop)
+        // var a = 10;
+        // document.write("<ul>");
+        // while(a >= 1){
+        //     document.write("<li>"+ a + ") "+"Hello"  + "</li>");
+        //     a -= 1;
+        // }
+        // document.write("</ul>");
+
+
+        // Do while loop 
+        // var s = 1;
+        // document.write("<ul>")
+        // do{
+        //     document.write("<li>"+s + ")"+"THE-SYM </li>");
+        //     s++;
+        // }while(s <= 15)
+        // document.write("</ul>")
+
+
+        // For loop
+        // for(var a = 1; a <= 12; a++){
+        //     document.write("Testing of for loop<br>");
+        // }
+
+        // Break & Continue
+        // for(var s = 1; s <= 15; s++){
+        //     if(s == 5){
+        //         document.write("continue : " + s + "<br>");
+        //         continue;
+        //     }
+        //     document.write("Number : " + s + "<br>");
+        // }
+
+
+        // Even/odd number with loop
+        // for(a = 1; a<=150;a++){
+        //     if(a % 2 == 0){
+        //         document.write("Even number is : " + a + "<br>");
+        //     }else{
+        //         document.write("Odd number is : " + a + "<br>");
+        //     }
+        // }
+
+
+        // Nested loop
+        // for(i = 1; i <= 100; i += 10){
+        //     for(b = i; b < i+10; b++){
+        //         document.write(b + " ");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        // Another Example of Nested loop
+        // for (a = 1; a <= 15; a++) {
+        //     for (b = 1; b <= a; b++) {
+        //         document.write(b + " ");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        // One more exp. with nested loop
+        // for(a = 1; a <= 5; a++){
+        //     for(b =1; b <= a; b++){
+        //         document.write(a);
+        //     }
+        //     document.write("<br>");
+        // }
+
+        // for(a = 1; a <= 10; a++){
+        //     for(b = 1; b <= a; b++){
+        //         document.write(b);
+        //     }
+        //     document.write("<br>")
+        // }
+
+        // Array's
+        // var name = ["null"];
+        // var num = [1,2,3,4,5,6,7,8,9];
+        // document.write(name + "<br>");
+        // document.write(typeof(name) + "<br>");
+        // document.write(num + "<br>");
+        // document.write("Variable (num) data type is : " + typeof(num));
+
+        // Use trick with Array.
+        // var num = [1,2,3,4,5,6,7,8,9];
+        // var sum = 0;
+
+        // for(i = 0; i <= 8; i++){
+        //     document.write(num[i] + "<br>");
+        //     sum += num[i];
+        // }
+        // document.write("Total sum is : " + sum);
+
+        // Array Constructor.
+        // var num = new Array();
+        // for(i = 0; i < 5; i++){
+        // num[i] = prompt("Enter your value: ");
+        // }
+        // for(a = 0; a < 5; a++){
+        //     document.write(num[a] + "<br>");
+        // }
+
+        // Multidimensional Array.
+        // var ary = [
+        //     ["sam", 15, "Male", "BCA"],
+        //     ["Ram", 18, "Male", "BBA"],
+        //     ["Rani", 15, "Female", "BCA"]
+        // ];
+        // document.write("<table border = '1px' cellspacing = 0>");
+        // for(i = 0; i < ary.length; i++){
+        //     document.write("<tr>");
+        //     for(a = 0; a < ary[i].length; a++){
+        //         document.write("<td>"+ ary[i][a] + "</td>");
+        //     };
+        //     document.write("</tr>");
+        // };
+        // document.write("</table>");
+
+        // Modify & delete.
+        // var names = ['s', 'a', 'm'];
+        // document.write(names + '<br>');
+        // names[2] = 5;
+        // document.write(names);
+        // delete names[2];
+        // document.write(names);
+        
+
+        // Array Method. (sort & reverse).
+        var name = ['sam', 'ram', 'karan', 'sajan', 'jaswinder'];
+        name.sort();
+        document.write(name);
+        
+
+
+
+    </script>
+    <!-- <button onmouseout="tap()">Click Me</button><br><br> -->
+
+    <!-- work like a onclick -->
+    <!-- <button onmousedown="tp()">Tap Me</button><br><br> -->
+
+    <!-- <button onmouseup="work()">Submit</button> -->
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h3>Discuss about objects.</h3>
+    <script>
+        // Objects in JS.
+        var data = {
+            name:"sayam",
+            class:"BCA",
+            rollno:44,
+            dpt:"BIMS",
+            fruits : ["apple","grapes","orange","banana"],
+            fName : function(){
+                return this.name + this.class;
+            },
+            address : {
+                'state' : 'punjab',
+                'Teh' : 'sardulgarh'
+            }
+        }
+        console.log(data);
+        console.log("Your state is : " + data.address.state);
+        document.write("Your state is : " + data.address.state + ".");
+        console.log(data.fName());
+    </script>
+</body>
+</html>

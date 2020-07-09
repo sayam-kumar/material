@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try</title>
+</head>
+<style>
+    div.abc{
+        color: tomato;
+    } 
+    #header{
+        outline: 2px dotted yellow;
+        padding: 20px;
+        font-size: 32px;
+    }
+</style>
+
+<body>
+    <div id="header" class="abc" style="border:2px solid green">
+        <h1>Yahoo baba</h1>
+    </div>
+
+    <script>
+        var element
+
+        document.getElementById("header").innerText = "wow";
+        document.getElementById("header").attributes[1].value = "cba";
+        document.getElementById("header").removeAttribute("style");
+
+        element = document.getElementById("header").getAttribute("class");
+        console.log(element);
+    </script>
+</body>
+
+</html>

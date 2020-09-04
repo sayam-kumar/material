@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        /* custom scrollbar */
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f100;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 40px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Set height to 100% for body and html to enable the background image to cover the whole page: */
+        body,
+        html {
+            font-size: 30px;
+            height: 100%
+        }
+
+        .col-2 {
+            width: 20%;
+        }
+
+        .col-3 {
+            width: 30%;
+        }
+
+        .col-7 {
+            width: 70%;
+        }
+
+        .col-8 {
+            width: 80%;
+        }
+
+        .col-10 {
+            width: 100%;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: auto;
+            min-height: 60px;
+            box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.445);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            z-index: 99;
+            background: rgba(172, 166, 166, 0.102);
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .logo {
+            color: grey;
+            font-size: 55%;
+
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: #8D406C;
+            font-size: 150%;
+        }
+
+        nav ul li {
+            float: left;
+            list-style: none;
+        }
+
+        nav ul li a {
+            display: flex;
+            font-size: 50%;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 15px;
+            color: black;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        .close {
+            float: right;
+            display: none;
+        }
+
+        .hide {
+            display: none;
+            padding: 8px 15px;
+            height: 51px;
+            min-height: 15px;
+        }
+
+        .hide a {
+            padding: 20px;
+            min-height: 15px;
+            height: 15px;
+        }
+
+        .bgimg {
+            background-image: url('./ img/comming-soon.jpg');
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            color: black;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 25px;
+        }
+
+        /* Position text in the top-left corner */
+        .topleft {
+            position: absolute;
+            top: 0;
+            left: 16px;
+        }
+
+        /* Position text in the bottom-left corner */
+        .bottomleft {
+            position: absolute;
+            bottom: 0;
+            left: 16px;
+        }
+
+        /* Position text in the middle */
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 500;
+            margin: 18px 0;
+        }
+
+        p {
+            margin: 18px 0;
+        }
+
+        /* Style the <hr> element */
+        hr {
+            margin: auto;
+            width: 40%;
+        }
+
+        .row1 {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: auto;
+        }
+
+        .row1::after {
+            display: table;
+            clear: both;
+            content: "";
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        @media screen and (max-width:720px) {
+            nav {
+                display: none;
+            }
+
+            .close {
+                padding: 8px 15px;
+                float: right;
+                display: block;
+                box-sizing: border-box;
+                z-index: 99;
+            }
+
+            .hide {
+                display: block;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 28px;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            h1 {
+                font-size: 25px;
+            }
+
+            p #demo {
+                font-size: 25px;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            h1 {
+                font-size: 23px;
+            }
+
+            p {
+                font-size: 22px;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 19px;
+            }
+        }
+
+        @media screen and (max-width:300px) {
+            h1 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 17px;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            h1 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="col-3">
+            <a class="logo" href=""> <span>S</span>tatus<span>W</span>ar</a>
+        </ul>
+        <ul class="col-7">
+            <li><a href="./myself.html">home</a></li>
+            <li><a href="./hindi.html">hindi</a></li>
+            <li><a href="./english.html">english</a></li>
+            <li><a href="./punjabi.html">Punjabi</a></li>
+            <li class="right"><a href="./more.html" class="active-class">more</a></li>
+        </ul>
+    </nav>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="./myself.html">home</a>
+            <a href="./hindi.html">hindi</a>
+            <a href="./english.html">english</a>
+            <a href="punjabi.html" class="active-class">Punjabi</a>
+            <a href="./more.html">more</a>
+        </div>
+    </div>
+    <span onclick="openNav()" class="close">&#9776;</span>
+    <div class="hide">
+        <a class="logo" href=""> <span>S</span>tatus<span>W</span>ar</a>
+    </div>
+    <div class="bgimg">
+        <div class="middle">
+            <h1>COMING SOON</h1>
+            <hr>
+            <p id="demo" style="font-size:30px"></p>
+        </div>
+        <div class="bottomleft">
+            <!-- <p>This page is under development</p> -->
+        </div>
+    </div>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 100));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+</body>
+
+</html>
